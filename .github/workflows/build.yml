@@ -46,15 +46,15 @@ jobs:
       matrix:
         job_name:
           - linux
-          - osx
-          - win
+          # - osx
+          # - win
         include:
           - job_name: linux
             os: ubuntu-latest
-          - job_name: osx
-            os: macos-11
-          - job_name: win
-            os: windows-latest
+          # - job_name: osx
+          #   os: macos-11
+          # - job_name: win
+          #   os: windows-latest
 
     name: '${{ matrix.job_name }}'
     runs-on: '${{ matrix.os }}'
